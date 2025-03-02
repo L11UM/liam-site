@@ -7,6 +7,19 @@ const audio = document.getElementById('bg-sound');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
+window.addEventListener('resize', () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  drawStars(); // Redraw stars on resize
+});
+
+// Handle window resize
+window.addEventListener('resize', () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  drawStars(); // Redraw stars on resize
+});
+
 // Starry background
 function drawStars() {
   ctx.fillStyle = '#0a0a0f';
